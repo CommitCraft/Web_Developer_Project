@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Web App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Music Web App</h1>
+    <input type="text" id="searchInput" placeholder="Search for a song or artist...">
+    <button id="searchButton">Search</button>
+  </header>
+
+  <div id="loader" class="hidden"></div>
+
+  <main id="musicList">
+    <!-- Music cards will be dynamically generated here -->
+  </main>
+
+  <div id="playerContainer" class="hidden">
+    <h2 id="trackTitle"></h2>
+    <audio id="musicPlayer" controls autoplay>
+      <source id="trackSource" src="" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="closePlayer">Close</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Music Web App</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
