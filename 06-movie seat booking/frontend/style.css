@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  color: #444;
+}
+
+/* Login Container */
+.login {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.login input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.login button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login button:hover {
+  background-color: #45a049;
+}
+
+/* Movie Container */
+.movie-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.movie-container label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Showcase Legend */
+.showcase {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 15px;
+}
+
+.showcase div {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.showcase .seat {
+  background-color: #444451;
+}
+
+.showcase .seat.selected {
+  background-color: #6feaf6;
+}
+
+.showcase .seat.occupied {
+  background-color: #ff4d4d;
+}
+
+/* Theater Layout */
+.container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  background-color: #ddd;
+  height: 50px;
+  width: 80%;
+  margin-bottom: 20px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.theater {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+/* Seat Styles */
+.seat {
+  background-color: #444451;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.seat.occupied {
+  background-color: #ff4d4d;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat:hover:not(.occupied) {
+  transform: scale(1.2);
+  background-color: #b0e5f8;
+}
+
+/* Summary Section */
+.text {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.text span {
+  font-weight: bold;
+}
+
+/* Booking Button */
+button#bookBtn {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#bookBtn:hover {
+  background-color: #0079a1;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.toast.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.toast.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}

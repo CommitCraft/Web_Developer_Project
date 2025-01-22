@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Seat Booking</title>
+</head>
+<body>
+    <h1>Movie Seat Booking</h1>
+    <div class="login">
+        <input type="text" id="userName" placeholder="Enter your name" />
+        <input type="text" id="userPhone" placeholder="Enter your phone number" />
+        <button id="loginBtn">Login/Register</button>
+    </div>
+    <div class="movie-container">
+        <label for="movie">Pick a movie:</label>
+        <select name="movie" id="movie"></select>
+    </div>
+    <ul class="showcase">
+        <li><div class="seat"></div><small>Available</small></li>
+        <li><div class="seat selected"></div><small>Selected</small></li>
+        <li><div class="seat occupied"></div><small>Occupied</small></li>
+    </ul>
+    <div class="container">
+        <div class="screen"></div>
+        <div id="theater" class="theater"></div>
+    </div>
+    <p class="text">
+        You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span>.
+    </p>
+    <button id="bookBtn">Book Now</button>
+    <div id="toast" class="toast hidden">Booking Successful!</div>
+    <script src="script.js"></script>
+</body>
+</html>
